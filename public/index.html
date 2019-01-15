@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale =1">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  
     <title>CSS/HTML Workshop with Privateaser</title>
   </head>
-  <body>
-    <div id="bar">
-      <input class="name" type="text" placeholder="Bar name"/>
+<body>
+  
+  <header id="header">
+    <div class="container">
+        <img src="https://www.privateaser.com/static/img/logo-privateaser.svg" width="150" /></img></a>
+    </div>
+  </header>
+ 
+ <section class="jumbotron text-center">
+      <h3 class="jumbotron-heading"> Event reservation simulator </h3>
+</section>
+ 
+<div class="text-center vsc-initialized">   
+	<div id="bar">
+      <input class="name" type="text" placeholder="Bar name" class="form-control"/>
       <input class="price-by-hour" type="number" placeholder="Price by hour"/>
       <input class="price-by-person" type="number" placeholder="Price by person"/>
     </div>
@@ -13,11 +29,21 @@
       <input class="name" type="text" placeholder="Booker name"/>
       <input class="time" type="number" placeholder="Time in h"/>
       <input class="persons" type="number" placeholder="Persons"/>
-      <input class="option" type="checkbox" placeholder="Deductible option"/>
+	  <div class="checkbox mb-3">
+		<label>
+			<input class="option" type="checkbox" value="Deductible option"/>
+			Deductible option
+		</label>
+	   </div>
     </div>
-    <button id="compute">Compute</button>
+
+    <button id="compute" class="btn btn-primary">Compute</button>
+
     <div id="actors"></div>
-    <script src="privateaser.js"></script>
+    
+	<script src="privateaser.js"></script>
     <script src="index.js"></script>
-  </body>
+</div>
+	
+ </body>
 </html>
